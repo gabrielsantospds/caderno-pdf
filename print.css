@@ -1,0 +1,226 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*-----start print layout---*/
+.content,
+.content-wrapper {
+    background-color: #c9c9c9;
+}
+
+.page-container {
+    background: #fff;
+    width: 8.5in;
+    margin: 0.5in auto 0.5in auto;
+    margin-right: auto;
+    padding: 0.5in;
+}
+
+.header {
+    visibility: hidden;
+    width: 100%;
+    height: 10px;
+    background: #fff;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    z-index: 99999999 !important;
+    text-align: center;
+}
+
+.footer {
+    visibility: hidden;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    background: #fff;
+    z-index: 99999999 !important;
+    text-align: left;
+}
+
+.print-only {
+    display: none !important;
+}
+
+.headerGroup {
+    position: relative;
+    background: transparent;
+}
+
+.headerGroup:after {
+    font-size: 42px;
+    color: #f50000;
+    text-align: center;
+    filter: grayscale(0.5);
+    background-size: cover;
+    opacity: .2;
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    width: 450px;
+    height: 450px;
+    z-index: 1 !important;
+    transform: translate(-50%);
+    display: none;
+}
+
+.page-container > table {
+    border: 1px solid black;
+}
+
+.page-container td {
+    border: 1px solid black;
+}
+
+.page-container tr {
+    border: 1px solid black;
+}
+
+.table {
+    border-collapse: collapse;
+}
+
+td {
+    padding: 5px 15px;
+}
+
+.row-title {
+    font-weight: bold;
+}
+
+.main-title {
+    margin-top: 50px;
+}
+
+.main-title>h1 {
+    font-weight: 100;
+    text-align: center;
+}
+
+h2 {
+    font-weight: 100;
+}
+
+ol {
+    counter-reset: item;
+}
+
+li {
+    display: block
+}
+
+li:before {
+    content: counters(item, ".") " ";
+    counter-increment: item
+}
+
+.main-list {
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ============media start========== */
+@media print {
+    .page-container {
+        background: #fff;
+        margin: 0;
+        padding: 0;
+    }
+
+    .headerGroup:after {
+        filter: grayscale(0);
+        display: inline-block;
+        opacity: .2;
+        width: 700px !important;
+    }
+
+    .content,
+    .content-wrapper {
+        padding: 0 !important;
+        margin: 0 !important;
+        background-color: #ffffff;
+
+    }
+
+    .header,
+    .header-block {
+        height: 150px;
+        background-color: #fff;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer,
+    .footer-block {
+        height: 60px;
+        background-color: none;
+    }
+
+    footer {
+        page-break-after: always;
+        height: 100px !important;
+    }
+
+    @page {
+        size: A4;
+        -webkit-print-color-adjust: exact;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100%;
+        height: 100%;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tfoot {
+        display: table-footer-group;
+    }
+
+    .invoice-print {
+        width: 95%;
+    }
+
+    .header {
+        visibility: visible;
+    }
+
+    .footer {
+        visibility: visible;
+    }
+
+    html,
+    body {
+        border: 1px solid white;
+        height: 99%;
+        page-break-after: avoid;
+        page-break-before: avoid;
+    }
+
+    /* ----for content management in print layout---- */
+    .no-print {
+        display: none !important;
+    }
+
+    .print-only {
+        display: block !important;
+    }
+
+    /* ----aditional style----- */
+    .page {
+        margin-right: 2rem;
+        margin-left: 2rem;
+        page-break-before: always;
+    }
+
+}
+
+/* ==============end print=========== */
+/* ================================== */
