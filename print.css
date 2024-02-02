@@ -24,7 +24,7 @@ body {
     left: 50;
     text-align: center;
 }
-/* 
+
 .footer {
     visibility: hidden;
     width: 100%;
@@ -35,7 +35,7 @@ body {
     background: #fff;
     z-index: 99999999 !important;
     text-align: left;
-} */
+}
 
 .print-only {
     display: none !important;
