@@ -1,0 +1,186 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content,
+.content-wrapper {
+    background-color: #c9c9c9;
+}
+
+.page-container {
+    background: #fff;
+    width: 8.5in;
+    margin: 0.5in auto 0.5in auto;
+    margin-right: auto;
+    padding: 0.5in;
+}
+
+.header {
+    visibility: hidden;
+    width: 88%;
+    position: fixed;
+    top: 20px;
+    left: 50;
+    text-align: center;
+}
+
+.footer {
+    visibility: hidden;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    background: #fff;
+    z-index: 99999999 !important;
+    text-align: left;
+}
+
+.print-only {
+    display: none !important;
+}
+
+.headerGroup {
+    position: relative;
+    background: transparent;
+}
+
+.headerGroup:after {
+    font-size: 42px;
+    color: #f50000;
+    text-align: center;
+    filter: grayscale(0.5);
+    background-size: cover;
+    opacity: .2;
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    width: 450px;
+    height: 450px;
+    z-index: 1 !important;
+    transform: translate(-50%);
+    display: none;
+}
+
+.page-container table {
+    border: 1.5px solid black;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.page-container td {
+    border: 1.5px solid black;
+    word-wrap: break-word;
+}
+
+.page-container tr {
+    border: 1.5px solid black;
+}
+
+.page-container th {
+    border: 1.5px solid black;
+    padding: 5px 15px;
+}
+
+.main-table th {
+    background-color: white;
+    text-align: start;
+}
+
+.secondary-table th {
+    background-color: #003abda1;
+    color: white;
+}
+
+.secondary-table tr:nth-child(even) {
+    background-color: #ffffff;
+    /* Cor para linhas pares */
+}
+
+.secondary-table tr:nth-child(odd) {
+    background-color: #003abd2b;
+    /* Cor para linhas ímpares */
+}
+
+.secondary-table {
+    text-align: center;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+td {
+    padding: 5px 15px;
+}
+
+.row-title {
+    font-weight: bold;
+}
+
+.main-title {
+    margin-top: 80px;
+}
+
+.main-title > h1 {
+    font-weight: 100;
+    text-align: center;
+}
+
+.title {
+    font-weight: 400;
+    color: #003abda1;
+}
+
+.subtitle {
+    font-weight: 600;
+}
+
+.image {
+    text-align: center;
+}
+
+.first-row {
+    line-height: 2;
+}
+
+.second-row {
+    line-height: 1.4;
+}
+
+ol {
+    counter-reset: item;
+}
+
+.summary-list li {
+    display: block
+}
+
+.summary-list li:before {
+    content: counters(item, ".") " ";
+    counter-increment: item
+}
+
+.summary-list {
+    padding: 0;
+}
+
+.summary-list li {
+    padding-bottom: 8px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    display: block;
+    list-style-type: disc !important;
+}
