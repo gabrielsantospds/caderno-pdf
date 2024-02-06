@@ -124,7 +124,7 @@ td {
     margin-top: 80px;
 }
 
-.main-title > h1 {
+.main-title>h1 {
     font-weight: 100;
     text-align: center;
 }
@@ -183,4 +183,11 @@ a:hover {
 ul {
     display: block;
     list-style-type: disc !important;
+}
+
+.code-div {
+    font-family: monospace;
+    background-color: black;
+    color: white;
+    padding: 10px;
 }

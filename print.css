@@ -26,10 +26,11 @@ body {
 
 .header,
 .header-block {
-    height: 175px;
+    height: 170px;
     background-color: #fff;
     padding: 0;
     margin: 0 auto;
+    margin-bottom: 10px;
     visibility: hidden;
 }
 
@@ -41,6 +42,9 @@ body {
 .footer-block {
     height: 60px;
     background-color: none;
+    text-align: center;
+    font-size: 9px;
+    font-weight: bold;
 }
 
 footer {
