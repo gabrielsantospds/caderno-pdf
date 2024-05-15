@@ -112,7 +112,7 @@ body {
     flex-direction: column;
 }
 
-td {
+.td {
     padding: 5px 15px;
 }
 
@@ -150,7 +150,7 @@ td {
     line-height: 1.4;
 }
 
-ol {
+.ol {
     counter-reset: item;
 }
 
@@ -171,16 +171,16 @@ ol {
     padding-bottom: 8px;
 }
 
-a {
+.link {
     text-decoration: none;
     color: black;
 }
 
-a:hover {
+.link:hover {
     text-decoration: underline;
 }
 
-ul {
+.ul {
     display: block;
     list-style-type: disc !important;
 }
